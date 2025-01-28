@@ -9,7 +9,7 @@ df = pd.read_csv("topics.csv")
 for index, row in df.iterrows():
     pdf.add_page()
     # Set the header
-    pdf.set_font(family="Times", style="B", size=12)
+    pdf.set_font(family="Times", style="B", size=24)
     pdf.cell(w=0, h=12, txt=row["Topic"], align="L", ln=1, border=0)
     pdf.line(10,21,200, 21)
 
@@ -30,4 +30,4 @@ for index, row in df.iterrows():
         pdf.cell(w=0, h=10, txt=row["Topic"], align="R")
 
 
-pdf.output("output.pdf")
+pdf.output("output1.pdf")
